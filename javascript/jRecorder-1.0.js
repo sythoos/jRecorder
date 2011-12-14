@@ -8,18 +8,13 @@
  *  - http://www.gnu.org/copyleft/gpl.html
  *
  * Author: Sajith Amma
- * Version: 1.1
- * Date: 14 December 2011
-
-Version changes
-
-Added preview option right after recording.
-Added seperate function sendData to trigger to send data to server (it won't send automcatically to server)
-
-
+ * Version: 1.0
+ * Date: 26 October 2011
  */
 
 /* Code is not verified using http://www.jshint.com/ */
+
+
 
 
 (function ($){
@@ -150,6 +145,7 @@ Added seperate function sendData to trigger to send data to server (it won't sen
 						divObj.appendChild(htmlObj);
 						
 						
+						
 						element.append(divObj);
 						
 		
@@ -180,12 +176,6 @@ Added seperate function sendData to trigger to send data to server (it won't sen
 							
 	} 
 		
-	//function call to send wav data to server url from the init configuration					
-	$.jRecorder.sendData = function(){
-					
-		getFlashMovie(jRecorderSettings['recorder_name']).jSendFileToServer();
-							
-	} 
 	
 	$.jRecorder.callback_started_recording = function(){
 		

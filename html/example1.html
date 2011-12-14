@@ -3,8 +3,8 @@
   
 <meta name="author" content="Sajith Amma" />
   
-<script src="../javascript/jquery.min.js"> </script>
-<script src="../javascript/jRecorder.js"> </script>
+<script src="jquery.min.js"> </script>
+<script src="jRecorder.js"> </script>
 
 <title>jRecorder Example</title>  
 
@@ -39,7 +39,7 @@ li {display:inline; margin-right:10px;}
    $.jRecorder(
      
      { 
-        host : 'http://yourhost.com{or localhost}/{Replace with your full path to receiver php file}/acceptfile.php?filename=hello.wav' ,
+        host : 'http://localhost:8888/git/jRecorder/html/acceptfile.php?filename=hello.wav' ,  //replace with your server path please
         
         callback_started_recording:     function(){callback_started(); },
         callback_stopped_recording:     function(){callback_stopped(); },
@@ -107,6 +107,16 @@ $('#record').click(function(){
 <input type="button" id="stop" value="Stop">
 
 <p>This Stop button trigger the stop record event.
+  
+<hr/>
+
+  
+<input type="button" id="send" value="Send Data">
+
+<p>This SendData button trigger the sendData event to flash to send the wav data to Server (configured in the host parameter).  
+  
+  
+<hr/>
   
 <pre>
 $('#stop').click(function(){
@@ -179,6 +189,15 @@ $('#stop').click(function(){
                     
                   })
                   
+                  
+                   $('#send').click(function(){
+                    
+                    
+                    
+                     $.jRecorder.sendData();
+                    
+                    
+                  })
                   
 
                   function callback_finished()

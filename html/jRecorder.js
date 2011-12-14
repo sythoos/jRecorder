@@ -10,13 +10,6 @@
  * Author: Sajith Amma
  * Version: 1.1
  * Date: 14 December 2011
-
-Version changes
-
-Added preview option right after recording.
-Added seperate function sendData to trigger to send data to server (it won't send automcatically to server)
-
-
  */
 
 /* Code is not verified using http://www.jshint.com/ */
