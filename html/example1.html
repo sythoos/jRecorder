@@ -39,7 +39,7 @@ li {display:inline; margin-right:10px;}
    $.jRecorder(
      
      { 
-        host : 'http://localhost:8888/git/jRecorder/html/acceptfile.php?filename=hello.wav' ,  //replace with your server path please
+        host : 'http://yourdomain.com/acceptfile.php?filename=hello.wav' ,  //replace with your server path please
         
         callback_started_recording:     function(){callback_started(); },
         callback_stopped_recording:     function(){callback_stopped(); },
@@ -106,8 +106,11 @@ $('#record').click(function(){
 
 <input type="button" id="stop" value="Stop">
 
-<p>This Stop button trigger the stop record event.
+<p>This Stop button trigger the stop record event. 
   
+  <pre>
+  Onclick of this button trigger  $.jRecorder.sendData() which send the data to the Server
+  </pre>
 <hr/>
 
   
